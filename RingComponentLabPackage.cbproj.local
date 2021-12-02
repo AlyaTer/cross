@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.164,=C:\Users\dimon\Documents\Embarcadero\Studio\Projects\TRingComponentLab.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.662,=C:\Users\dimon\Documents\Embarcadero\Studio\Projects\RingComponentLabPackagePCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.170,=vcl.bpi</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.640,=rtl.bpi</Transaction>
+  </Transactions>
+</BorlandProject>

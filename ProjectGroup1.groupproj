@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{751259A0-4C9E-45DA-9DA6-6A06675A047A}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="RingComponentLabPackage.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Project1.cbproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="RingComponentLabPackage">
+        <MSBuild Projects="RingComponentLabPackage.cbproj"/>
+    </Target>
+    <Target Name="RingComponentLabPackage:Clean">
+        <MSBuild Projects="RingComponentLabPackage.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="RingComponentLabPackage:Make">
+        <MSBuild Projects="RingComponentLabPackage.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="Project1">
+        <MSBuild Projects="Project1.cbproj"/>
+    </Target>
+    <Target Name="Project1:Clean">
+        <MSBuild Projects="Project1.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project1:Make">
+        <MSBuild Projects="Project1.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="RingComponentLabPackage;Project1"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="RingComponentLabPackage:Clean;Project1:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="RingComponentLabPackage:Make;Project1:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
